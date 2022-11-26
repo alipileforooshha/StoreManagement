@@ -1,0 +1,21 @@
+*{
+    direction: rtl;
+}
+a{
+    text-decoration: none;
+}
+.main-color, .main-color:hover{
+    color: #FB5012;
+}
+
+.main-color-bg{
+    background-color: #FB5012;
+}
+
+.huge-text{
+    font-size: 100px;
+}
+
+.login-div{
+    width: 33%;
+}
