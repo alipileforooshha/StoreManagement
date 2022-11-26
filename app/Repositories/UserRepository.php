@@ -8,13 +8,14 @@ use App\Models\User;
 use App\Models\V1\VerificationCodes;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class UserRepository implements UserRepositoryInterface
 {
     public function Create(Request $request){
         $user = User::create([
             'mobile' => $request->mobile,
-            'password' => $request->password,
+            'password' => Hash::make($request->password),
             'expiration_date' => Carbon::now()->addWeek()
         ]);
 

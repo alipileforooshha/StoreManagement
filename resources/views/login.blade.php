@@ -26,7 +26,7 @@
                 </div>
                 <div class="m-4">
                     <label for="" class="">رمز عبور</label>
-                    <input type="password" name="mobile" id="" class="form-control mt-2">
+                    <input type="password" name="password" id="" class="form-control mt-2">
                 </div>
                 <div class="m-4">
                     <button type="submit" class="btn text-white main-color-bg text-center w-100">ورود</button>

@@ -36,7 +36,7 @@
                     <button type="submit" class="btn text-white main-color-bg text-center w-100">ثبت نام</button>
                 </div>
             </form>
-            <a href="{{route('register')}}" class="main-color">اگر حساب کاربری ندارید کلیک کنید</a>
+            <a href="{{route('login')}}" class="main-color">اگر حساب کاربری دارید کلیک کنید</a>
         </div>
     </div>
 </body>

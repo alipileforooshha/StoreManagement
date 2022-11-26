@@ -17,16 +17,18 @@ class AuthController extends Controller
     }
 
     public function login(Request $request){
+        // dd(1);
         $validator = Validator::make($request->all(),[
             'mobile' => 'required',
             'password' => 'required'
         ]);
 
         if(Auth::attempt(['mobile' => $request->mobile, 'password' => $request->password])){
-            $user = Auth::user();
+            return redirect('/dashboard');
+        }else{
+            return view('login',['message'=>'اطلاعات ورودی اشتباه است']);
         }
 
-        return view('dashboard',['name'=>$user->mobile]);
     }
     
     public function register(Request $request){
