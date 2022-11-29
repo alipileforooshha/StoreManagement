@@ -1,2 +1,113 @@
-@include("./includes/sidebar")
-{{$user->mobile}}
+<div class="container-fluid">
+    <div class="row flex-nowrap">
+        @include("./includes/sidebar")
+        <div class="col border d-flex flex-column justify-content-center align-items-center">
+            <div class="d-flex justify-content-start">
+                <div class="d-flex flex-column col-6 m-4 p-4 dashboard-card">
+                    <div class="d-flex justify-content-around">
+                        <h4 class="main-color">
+                            پرفروش ترین ها
+                        </h4>
+                        <button class="btn bg-main-color text-white fs-6 px-3">
+                            مشاهده همه
+                        </button>
+                    </div>
+                    <div class="mt-3">
+                        <h5>
+                            مجموع فروش این ماه : 123112134
+                        </h5>
+                    </div>
+                    <div class="mt-2">
+                        <h5>
+                            مجموع فروش این ماه : 123112134
+                        </h5>
+                    </div>
+                    <div class="mt-2">
+                        <h5>
+                            مجموع فروش این ماه : 123112134
+                        </h5>
+                    </div>
+                </div>
+                <div class="d-flex flex-column col-6 m-4 p-4 dashboard-card">
+                    <div class="d-flex justify-content-around">
+                        <h4 class="main-color">
+                            پرفروش ترین ها
+                        </h4>
+                        <button class="btn bg-main-color text-white fs-6 px-3">
+                            مشاهده همه
+                        </button>
+                    </div>
+                    <div class="mt-3">
+                        <h5>
+                            مجموع فروش این ماه : 123112134
+                        </h5>
+                    </div>
+                    <div class="mt-2">
+                        <h5>
+                            مجموع فروش این ماه : 123112134
+                        </h5> 
+                    </div>
+                    <div class="mt-2">
+                        <h5>
+                            مجموع فروش این ماه : 123112134
+                        </h5> 
+                    </div>
+                </div>
+            </div>
+            
+            <div class="d-flex justify-content-start">
+                <div class="d-flex flex-column col-6 m-4 p-4 dashboard-card">
+                    <div class="d-flex justify-content-around">
+                        <h4 class="main-color">
+                            پرفروش ترین ها
+                        </h4>
+                        <button class="btn bg-main-color text-white fs-6 px-3">
+                            مشاهده همه
+                        </button>
+                    </div>
+                    <div class="mt-3">
+                        <h5>
+                            مجموع فروش این ماه : 123112134
+                        </h5>
+                    </div>
+                    <div class="mt-2">
+                        <h5>
+                            مجموع فروش این ماه : 123112134
+                        </h5>
+                    </div>
+                    <div class="mt-2">
+                        <h5>
+                            مجموع فروش این ماه : 123112134
+                        </h5>
+                    </div>
+                </div>
+                <div class="d-flex flex-column col-6 m-4 p-4 dashboard-card">
+                    <div class="d-flex justify-content-around">
+                        <h4 class="main-color">
+                            پرفروش ترین ها
+                        </h4>
+                        <button class="btn bg-main-color text-white fs-6 px-3">
+                            مشاهده همه
+                        </button>
+                    </div>
+                    <div class="mt-3">
+                        <h5>
+                            مجموع فروش این ماه : 123112134
+                        </h5>
+                    </div>
+                    <div class="mt-2">
+                        <h5>
+                            مجموع فروش این ماه : 123112134
+                        </h5>
+                    </div>
+                    <div class="mt-2">
+                        <h5>
+                            مجموع فروش این ماه : 123112134
+                        </h5>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
