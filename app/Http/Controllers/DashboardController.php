@@ -22,16 +22,23 @@ class DashboardController extends Controller
         $user = auth()->user();
         $start_date = Carbon::now();
         $start_date = Carbon::now();
+
+        //first card
         $whole_sales = $this->userInterface->GetSales();
         $all_sales_total_amount = $this->userInterface->GetSales()->sum('sale_price');
         $all_sales_total_profit = $this->userInterface->GetSales()->sum('profit');
         $all_expenses_total_amount = $this->userInterface->GetExpenses()->sum('amount');
-        // dd($all_sales_total_profit,$all_sales_total_amount,$all_expenses_total_amount);
+
+        //second card
+        $top_three_sales = $this->userInterface->GetTopThreeSales();
+
         return view('dashboard',[
             'user'=>$user,
             'all_sales_total_amount' => $all_sales_total_amount,
             'all_sales_total_profit' => $all_sales_total_profit,
             'all_expenses_total_amount' => $all_expenses_total_amount,
+        
+            'top_three_sales' => $top_three_sales,
         ]); 
     }
 }

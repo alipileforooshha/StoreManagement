@@ -37,21 +37,15 @@
                             مشاهده همه
                         </button>
                     </div>
-                    <div class="mt-3">
-                        <h5>
-                            مجموع فروش این ماه : 123112134
-                        </h5>
-                    </div>
-                    <div class="mt-2">
-                        <h5>
-                            مجموع فروش این ماه : 123112134
-                        </h5> 
-                    </div>
-                    <div class="mt-2">
-                        <h5>
-                            مجموع فروش این ماه : 123112134
-                        </h5> 
-                    </div>
+                    @foreach($top_three_sales as $item)
+                        <div class="mt-3">
+                            <h5 class="d-flex">
+                                <p class="m-0"> {{$item->item->name}} &nbsp; </p>
+                                <p class="m-0"> : </p>
+                                <p class="m-0">&nbsp; {{$item->number}} عدد</p>
+                            </h5>
+                        </div>
+                    @endforeach
                 </div>
             </div>
             
