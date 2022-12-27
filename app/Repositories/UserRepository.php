@@ -8,6 +8,7 @@ use App\Models\User;
 use App\Models\V1\VerificationCodes;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
 class UserRepository implements UserRepositoryInterface
@@ -27,28 +28,31 @@ class UserRepository implements UserRepositoryInterface
         return $user;
     }
 
-    public function GetUser($id)
+    public function GetUser()
     {
 
     }
-    public function GetTopThreeSales($id,$start_date,$end_date)
+    public function GetTopThreeSales($start_date = null,$end_date = null)
     {
 
     }
-    public function GetTopThreeExpenses($id,$start_date,$end_date)
+    public function GetTopThreeExpenses($start_date = null,$end_date = null)
     {
 
     }
-    public function GetTopThreeProfits($id,$start_date,$end_date)
+    public function GetTopThreeProfits($start_date = null,$end_date = null)
     {
 
     }
-    public function GetExpenses($id,$start_date,$end_date)
+    public function GetExpenses($start_date = null,$end_date = null)
     {
-
+        $user = Auth::user();
+        return $user->expenses;
     }
-    public function GetSales($id,$start_date,$end_date)
+    public function GetSales($start_date = null,$end_date = null)
     {
+        $user = Auth::user();
 
+        return $user->sales;
     }
 }

@@ -5,6 +5,7 @@ namespace App\Models;
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 
 use App\Models\V1\Category;
+use App\Models\V1\Expense;
 use App\Models\V1\Item;
 use App\Models\V1\Sale;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -56,5 +57,9 @@ class User extends Authenticatable
 
     public function categories(){
         return $this->hasMany(Category::class, 'user_id', 'id');
+    }
+
+    public function expenses(){
+        return $this->hasMany(Expense::class, 'user_id', 'id');
     }
 }
