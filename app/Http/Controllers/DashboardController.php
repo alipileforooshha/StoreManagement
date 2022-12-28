@@ -32,13 +32,16 @@ class DashboardController extends Controller
         //second card
         $top_three_sales = $this->userInterface->GetTopThreeSales();
 
+        //third card
+        $top_three_expenses = $this->userInterface->GetTopThreeExpenses();
+        
         return view('dashboard',[
             'user'=>$user,
             'all_sales_total_amount' => $all_sales_total_amount,
             'all_sales_total_profit' => $all_sales_total_profit,
             'all_expenses_total_amount' => $all_expenses_total_amount,
-        
             'top_three_sales' => $top_three_sales,
+            'top_three_expenses' => $top_three_expenses,
         ]); 
     }
 }

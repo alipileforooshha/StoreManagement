@@ -5,6 +5,7 @@ namespace App\Repositories;
 use App\Helpers\VerificationCode;
 use App\Interfaces\UserRepositoryInterface;
 use App\Models\User;
+use App\Models\V1\Expense;
 use App\Models\V1\Sale;
 use App\Models\V1\VerificationCodes;
 use Carbon\Carbon;
@@ -46,7 +47,12 @@ class UserRepository implements UserRepositoryInterface
     }
     public function GetTopThreeExpenses($start_date = null,$end_date = null)
     {
-
+        $user = Auth::user();
+        $result = Expense::where('user_id',$user->id)
+        ->orderBy('amount','Desc')
+        ->limit(3)->get(['title','amount']);
+        
+        return $result;
     }
     public function GetTopThreeProfits($start_date = null,$end_date = null)
     {
