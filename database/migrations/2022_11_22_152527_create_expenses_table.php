@@ -13,15 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('expenses', function (Blueprint $table) {
             $table->id();
-            $table->string('name')->nullable();
-            $table->string('mobile');
-            $table->string('email')->unique()->nullable();
-            $table->timestamp('verified_at')->nullable();
-            $table->string('password');
-            $table->rememberToken();
-            $table->date('expiration_date');
+            $table->string('title');
+            $table->double('amount');
+            $table->boolean('monthly');
+            $table->bigInteger('user_id')->unsigned();
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -33,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('expenses');
     }
 };
