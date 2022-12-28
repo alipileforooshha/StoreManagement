@@ -72,27 +72,21 @@
                 <div class="d-flex flex-column col-6 m-4 p-4 dashboard-card">
                     <div class="d-flex justify-content-around">
                         <h4 class="main-color">
-                            پرفروش ترین ها
+                            پرسود ترین ها
                         </h4>
                         <button class="btn bg-main-color text-white fs-6 px-3">
                             مشاهده همه
                         </button>
                     </div>
-                    <div class="mt-3">
-                        <h5>
-                            مجموع فروش این ماه : 123112134
-                        </h5>
-                    </div>
-                    <div class="mt-2">
-                        <h5>
-                            مجموع فروش این ماه : 123112134
-                        </h5>
-                    </div>
-                    <div class="mt-2">
-                        <h5>
-                            مجموع فروش این ماه : 123112134
-                        </h5>
-                    </div>
+                    @foreach($top_three_profits as $profit)
+                        <div class="mt-2">
+                            <h5 class="d-flex">
+                                <p class="m-0"> {{$profit->item->name}} &nbsp; </p>
+                                <p class="m-0"> : </p>
+                                <p class="m-0">&nbsp; {{number_format($profit->profit)}} تومن</p>
+                            </h5>
+                        </div>
+                    @endforeach
                 </div>
 
             </div>

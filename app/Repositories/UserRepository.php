@@ -56,7 +56,14 @@ class UserRepository implements UserRepositoryInterface
     }
     public function GetTopThreeProfits($start_date = null,$end_date = null)
     {
-
+        $user = Auth::user();
+        $result = Sale::where('user_id',$user->id)
+        ->selectRaw("item_id ,SUM(profit) as profit")
+        ->groupBy('item_id')
+        ->orderBy('profit','Desc')
+        ->limit(3)->with('item')->get();
+        // dd($result);
+        return $result;
     }
     public function GetExpenses($start_date = null,$end_date = null)
     {
