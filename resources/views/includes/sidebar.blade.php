@@ -33,8 +33,9 @@
                             </a>
                         </li>
                         <li class="mt-2">
-                            <a href="/sales" data-bs-toggle="collapse" class="nav-link px-0 align-middle text-white">
-                                <i class="fs-4 bi-speedometer2"></i> <span class="ms-1 d-none d-sm-inline fs-3">فروش</span> </a>
+                            <a href="{{route('sales')}}" class="nav-link px-0 align-middle text-white">
+                                <i class="fs-4 bi-speedometer2"></i> <span class="ms-1 d-none d-sm-inline fs-3">فروش</span>
+                            </a>
                         </li>
                         <li class="mt-2">
                             <a href="#" class="nav-link px-0 align-middle">
