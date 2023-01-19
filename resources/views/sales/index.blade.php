@@ -24,12 +24,15 @@
                             <td class="text-center p-2">{{number_format($sale->profit)}}</td>
                             <td class="text-center p-2">{{number_format($sale->sale_price)}}</td>
                             <td class="text-center p-2">{{$sale->created_at->format('Y-m-d')}}</td>
-                            <td class="text-center">
+                            <td class="d-flex justify-content-around text-center">
                                 <form action="{{route('sales.delete',$sale->id)}}" method="POST" class="p-0 m-0">
                                     <input type="hidden" name="_method" value="DELETE" hidden>
                                     @csrf
                                     <button type="submit" class="btn btn-danger">حذف</button>
                                 </form>
+                                <a href="{{route('sales.item',$sale->id)}}" class="btn btn-primary">
+                                    مشاهده
+                                </a>
                             </td>
                         </tr>
                     @endforeach

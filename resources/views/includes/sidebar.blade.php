@@ -11,8 +11,8 @@
     <!-- Bootstrap CSS CDN -->
 <!-- CSS only -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">    <!-- Our Custom CSS -->
-    <link rel="stylesheet" href="styles/sidebar.css">
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="{{asset('styles/sidebar.css')}}">
+    <link rel="stylesheet" href="{{asset('styles/style.css')}}">
 
     <!-- Font Awesome JS -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
@@ -38,7 +38,7 @@
                             </a>
                         </li>
                         <li class="mt-2">
-                            <a href="#" class="nav-link px-0 align-middle">
+                            <a href="{{route('sales')}}" class="nav-link px-0 align-middle">
                                 <i class="fs-4 bi-table"></i> <span class="ms-1 d-none d-sm-inline text-white fs-3">هزینه ها</span></a>
                         </li>
                         <li class="mt-2">

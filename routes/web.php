@@ -14,4 +14,9 @@ Route::get('/sales',[SalesController::class, 'index']);
 Route::group(['prefix'=>'sales', 'as'=>'sales'], function(){
     Route::get('/',[SalesController::class, 'index'])->name('');
     Route::delete('/{id}',[SalesController::class, 'destroy'])->name('.delete');
+    Route::get('/{id}',[SalesController::class, 'item'])->name('.item');
+    Route::put('/{id}',[SalesController::class, 'update'])->name('.update');
+    // Route::put('/{id}',function(){
+    //     return 11111111111;
+    // })->name('.update');
 });
