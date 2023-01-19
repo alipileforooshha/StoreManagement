@@ -4,5 +4,7 @@ namespace App\Interfaces;
 
 interface SaleRepositoryInterface{
     public function index();
+    public function find($id);
+    public function update($id, $request);
     public function destroy($id);
 }

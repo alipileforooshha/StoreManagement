@@ -26,4 +26,16 @@ class SaleRepository implements SaleRepositoryInterface{
         Sale::destroy($id);
         return;
     }
+
+    public function find($id){
+        $item = Sale::find($id);
+        $item->created_at = DateHelper::toShamsi($item->created_at);
+        return $item;
+    }
+
+    public function update($id, $request){
+        $sale = Sale::find($id);
+        $sale->update($request->all());
+        return;
+    }
 }
