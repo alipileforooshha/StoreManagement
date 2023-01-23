@@ -38,41 +38,21 @@
                             </a>
                         </li>
                         <li class="mt-2">
-                            <a href="{{route('sales')}}" class="nav-link px-0 align-middle">
+                            <a href="{{route('expenses')}}" class="nav-link px-0 align-middle">
                                 <i class="fs-4 bi-table"></i> <span class="ms-1 d-none d-sm-inline text-white fs-3">هزینه ها</span></a>
                         </li>
                         <li class="mt-2">
-                            <a href="#submenu2" data-bs-toggle="collapse" class="nav-link px-0 align-middle ">
-                                <i class="fs-4 bi-bootstrap"></i> <span class="ms-1 d-none d-sm-inline text-white fs-3">دسته بندی</span></a>
-                            <ul class="collapse nav flex-column ms-1" id="submenu2" data-bs-parent="#menu">
-                                <li class="w-100">
-                                    <a href="#" class="nav-link px-0 text-white"> <span class="d-none d-sm-inline text-white">Item</span> 1</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="nav-link px-0 text-white"> <span class="d-none d-sm-inline text-white">Item</span> 2</a>
-                                </li>
-                            </ul>
+                            <a href="{{route('categories')}}" data-bs-toggle="collapse" class="nav-link px-0 align-middle ">
+                                <i class="fs-4 bi-bootstrap"></i> <span class="ms-1 d-none d-sm-inline text-white fs-3">دسته بندی</span>
+                            </a>
                         </li>
                         <li class="mt-2">
                             <a href="#submenu3" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
-                                <i class="fs-4 bi-grid"></i> <span class="ms-1 d-none d-sm-inline text-white fs-3">مشتریان</span> </a>
-                                <ul class="collapse nav flex-column ms-1" id="submenu3" data-bs-parent="#menu">
-                                <li class="w-100">
-                                    <a href="#" class="nav-link px-0 text-white"> <span class="d-none d-sm-inline text-white">Product</span> 1</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="nav-link px-0 text-white"> <span class="d-none d-sm-inline text-white">Product</span> 2</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="nav-link px-0 text-white"> <span class="d-none d-sm-inline text-white">Product</span> 3</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="nav-link px-0 text-white"> <span class="d-none d-sm-inline text-white">Product</span> 4</a>
-                                </li>
-                            </ul>
+                                <i class="fs-4 bi-grid"></i> <span class="ms-1 d-none d-sm-inline text-white fs-3">مشتریان</span>
+                            </a>
                         </li>
                         <li class="mt-2">
-                            <a href="#" class="nav-link px-0 align-middle">
+                            <a href="{{route('items')}}" class="nav-link px-0 align-middle">
                                 <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline text-white fs-3">موجودی</span> </a>
                         </li>
                     </ul>

@@ -16,7 +16,9 @@ return new class extends Migration
         Schema::create('items', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('price');
+            $table->double('buy_price');
+            $table->double('sell_price');
+            $table->integer('count')->unsigned();
             $table->bigInteger('category_id')->unsigned();
             $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
             $table->bigInteger('user_id')->unsigned();

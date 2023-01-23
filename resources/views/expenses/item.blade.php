@@ -2,35 +2,31 @@
     <div class="row flex-nowrap">
         @include("../includes/sidebar")
         <div class="col border d-flex justify-content-center">
-            <form action="{{route('sales.update',$sale->id)}}" method="post" class="d-flex w-50 flex-column justify-content-center align-items-between">
+            <form action="{{route('expenses.update',$expense->id)}}" method="post" class="d-flex w-50 flex-column justify-content-center align-items-between">
                 <input type="hidden" name="_method" value="PUT" hidden>
                 @csrf
                 <div class="d-flex flex-column my-2">
                     <label for="" class="my-2 fs-5">نام آیتم</label>
-                    <input type="text" name="item_name" class="form-control fs-5" value="{{$sale->item->name}}">
+                    <input type="text" name="item_name" class="form-control fs-5" value="{{$expense->title}}">
                 </div>
                 <div class="d-flex flex-column my-2">
                     <label for="" class="my-2 fs-5">قیمت فروش</label>
-                    <input type="text" name="sale_price" class="form-control fs-5" value="{{$sale->sale_price}}">
+                    <input type="text" name="sale_price" class="form-control fs-5" value="{{$expense->amount}}">
                 </div>
                 <div class="d-flex flex-column my-2">
                     <label for="" class="my-2 fs-5">سود حاصل</label>
-                    <input type="text" name="profit" class="form-control fs-5" value="{{$sale->profit}}">
-                </div>
-                <div class="d-flex flex-column my-2">
-                    <label for="" class="my-2 fs-5">تعداد فروخته شده</label>
-                    <input type="text" name="number" class="form-control fs-5" value="{{$sale->number}}">
+                    <input type="text" name="profit" class="form-control fs-5" value="{{$expense->monthly ? "ماهانه" : "یکبار"}}">
                 </div>
                 <div class="d-flex flex-column my-2">
                     <label for="" class="my-2 fs-5">تاریخ فروش</label>
-                    <input type="text" name="created_at" class="form-control fs-5" value="{{$sale->created_at}}">
+                    <input type="text" name="created_at" class="form-control fs-5" value="{{$expense->created_at}}">
                 </div>
                 <div class="d-flex justify-content-around">
                     <button type="submit" class="btn btn-success">
                         بروزرسانی
                     </button>
                 </form>
-                    <form method="POST" action="{{route('sales.delete',$sale->id)}}">
+                    <form method="POST" action="{{route('expenses.delete',$expense->id)}}">
                         @csrf
                         <input type="hidden" name="_method" value="DELETE" hidden>
                         <button href="" class="btn btn-danger">

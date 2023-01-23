@@ -12,9 +12,11 @@ class Item extends Model
 
     protected $fillable = [
         'name',
-        'price',
+        'buy_price',
+        'sell_price',
         'category_id',
         'user_id',
+        'count'
     ];
 
     public function user(){

@@ -19,7 +19,9 @@ class ItemFactory extends Factory
     {
         return [
             'name' => fake()->name(),
-            'price' => fake()->numberBetween(1000,200000),
+            'buy_price' => fake()->numberBetween(1000,200000),
+            'sell_price' => fake()->numberBetween(200000,400000),
+            'count' => fake()->numberBetween(0,50),
             // 'category_id' => $this->category_id,
             // 'user_id' => $this->user_id,
             'created_at' => Carbon::now(),

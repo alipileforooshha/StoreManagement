@@ -5,7 +5,10 @@ a{
     text-decoration: none;
 }
 body{
-    background-color: #f0f0f0;
+    background-color: #eeeeee;
+}
+.section-color{
+    background-color: #f7f7f7;
 }
 .main-color, .main-color:hover{
     color: #FB5012;
