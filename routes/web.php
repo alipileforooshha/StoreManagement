@@ -31,6 +31,8 @@ Route::group(['prefix'=>'expenses', 'as'=>'expenses'], function(){
 
 Route::group(['prefix'=>'items', 'as'=>'items'], function(){
     Route::get('/',[ItemsController::class, 'index'])->name('');
+    Route::get('/create',[ItemsController::class, 'create'])->name('.create');
+    Route::post('/create',[ItemsController::class, 'store'])->name('.store');
     Route::delete('/{id}',[ItemsController::class, 'destroy'])->name('.delete');
     Route::get('/{id}',[ItemsController::class, 'item'])->name('.item');
     Route::put('/{id}',[ItemsController::class, 'update'])->name('.update');

@@ -1,9 +1,17 @@
 <div class="container-fluid">
     <div class="row flex-nowrap">
         @include("./includes/sidebar")
-        <div class="col border d-flex flex-column justify-content-center p-2 align-items-center">
-            
-            <h3 class="main-color section-color align-self-start mb-4 p-3 border-bottom rounded border-rounded text-bold shadow">جدول موجودی</h3>
+        <div class="col border d-flex flex-column justify-content-center p-2 align-items-start">
+            <div class="d-flex justify-content-center align-items-center my-2">
+                <div>
+                    <h3 class="main-color section-color align-self-start p-3 border-bottom rounded border-rounded text-bold shadow">جدول موجودی</h3>
+                </div>
+                <div class="mx-4">
+                    <a href="{{route('items.create')}}" class="btn btn-success">
+                        کالای جدید
+                    </a>
+                </div>
+            </div>
             <table class="table table-bordered shadow section-color rounded">
                 <thead>
                     <tr>

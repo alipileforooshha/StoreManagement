@@ -10,6 +10,12 @@ body{
 .section-color{
     background-color: #f7f7f7;
 }
+
+.btn-success{
+    border-color: #00b809 !important;
+    background-color: #00b809 !important;
+}
+
 .main-color, .main-color:hover{
     color: #FB5012;
 }
@@ -21,6 +27,7 @@ body{
 .text-bold{
     font-weight: bolder;
 }
+
 .bg-main-color{
     background-color: #FB5012;
 }
@@ -32,6 +39,7 @@ body{
 .login-div{
     width: 33%;
 }
+
 .min-vh-100{
     height: 100vh;
 }
