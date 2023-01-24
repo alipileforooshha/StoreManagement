@@ -2,39 +2,39 @@
 
 namespace App\Http\Controllers;
 
+use App\Interfaces\CategoryRepositoryInterface;
 use Illuminate\Http\Request;
 
 class CategoryController extends Controller
 {
-    private $ItemsRepositoryInterface;
-    public function __construct(ItemsRepositoryInterface $ItemsRepositoryInterface)
+    private $CategoryRepositoryInterface;
+
+    public function __construct(CategoryRepositoryInterface $CategoryRepositoryInterface)
     {
-        $this->ItemsRepositoryInterface = $ItemsRepositoryInterface;
+        $this->CategoryRepositoryInterface = $CategoryRepositoryInterface;
     }
 
     public function index(){
-        $items = $this->ItemsRepositoryInterface->index();
-        // dd($sales);
-        return view('items.index',[
-            'items' => $items
+        $categories = $this->CategoryRepositoryInterface->index();
+        return view('categories.index',[
+            'categories' => $categories
         ]);
     }
 
     public function item($id){
-        $item = $this->ItemsRepositoryInterface->find($id);
-        // dd($sale);
-        return view('items.item',[
-            'item' => $item
+        $category = $this->CategoryRepositoryInterface->find($id);
+        return view('categories.item',[
+            'category' => $category
         ]);
     }
 
     public function update($id, Request $request){
-        $item = $this->ItemsRepositoryInterface->update($id, $request);
+        $item = $this->CategoryRepositoryInterface->update($id, $request);
         return back();
     }
 
     public function destroy($id){
-        $this->ItemsRepositoryInterface->destroy($id);
-        return redirect('/items');
+        $this->CategoryRepositoryInterface->destroy($id);
+        return redirect('/categories');
     }
 }

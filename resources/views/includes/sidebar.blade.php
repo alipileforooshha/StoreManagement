@@ -42,7 +42,7 @@
                                 <i class="fs-4 bi-table"></i> <span class="ms-1 d-none d-sm-inline text-white fs-3">هزینه ها</span></a>
                         </li>
                         <li class="mt-2">
-                            <a href="{{route('categories')}}" data-bs-toggle="collapse" class="nav-link px-0 align-middle ">
+                            <a href="{{route('categories')}}" class="nav-link px-0 align-middle ">
                                 <i class="fs-4 bi-bootstrap"></i> <span class="ms-1 d-none d-sm-inline text-white fs-3">دسته بندی</span>
                             </a>
                         </li>

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ExpensesController;
 use App\Http\Controllers\ItemsController;
@@ -36,8 +37,8 @@ Route::group(['prefix'=>'items', 'as'=>'items'], function(){
 });
 
 Route::group(['prefix'=>'categories', 'as'=>'categories'], function(){
-    Route::get('/',[ItemsController::class, 'index'])->name('');
-    Route::delete('/{id}',[ItemsController::class, 'destroy'])->name('.delete');
-    Route::get('/{id}',[ItemsController::class, 'item'])->name('.item');
-    Route::put('/{id}',[ItemsController::class, 'update'])->name('.update');
+    Route::get('/',[CategoryController::class, 'index'])->name('');
+    Route::delete('/{id}',[CategoryController::class, 'destroy'])->name('.delete');
+    Route::get('/{id}',[CategoryController::class, 'item'])->name('.item');
+    Route::put('/{id}',[CategoryController::class, 'update'])->name('.update');
 });
