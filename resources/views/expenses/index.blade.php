@@ -1,10 +1,19 @@
 <div class="container-fluid">
     <div class="row flex-nowrap">
         @include("./includes/sidebar")
-        <div class="col border d-flex flex-column justify-content-center align-items-center">
+        <div class="col border d-flex flex-column justify-content-start align-items-start">
             
-            <h3 class="main-color align-self-start mb-4 p-3 border-bottom text-bold">جدول هزینه ها</h3>
-            <table class="table table-bordered">
+            <div class="d-flex justify-content-start align-items-center my-2">
+                <div>
+                    <h3 class="main-color section-color align-self-start p-3 border-bottom rounded border-rounded text-bold shadow">جدول هزینه ها</h3>
+                </div>
+                <div class="mx-4">
+                    <a href="{{route('expenses.create')}}" class="btn btn-success">
+                        هزینه جدید
+                    </a>
+                </div>
+            </div>
+            <table class="table table-bordered shadow">
                 <thead>
                     <tr>
                         <td class="text-center p-2">عنوان</td>
