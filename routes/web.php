@@ -40,6 +40,8 @@ Route::group(['prefix'=>'items', 'as'=>'items'], function(){
 
 Route::group(['prefix'=>'categories', 'as'=>'categories'], function(){
     Route::get('/',[CategoryController::class, 'index'])->name('');
+    Route::get('/create',[CategoryController::class, 'create'])->name('.create');
+    Route::post('/create',[CategoryController::class, 'store'])->name('.store');
     Route::delete('/{id}',[CategoryController::class, 'destroy'])->name('.delete');
     Route::get('/{id}',[CategoryController::class, 'item'])->name('.item');
     Route::put('/{id}',[CategoryController::class, 'update'])->name('.update');
