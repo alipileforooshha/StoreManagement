@@ -4,9 +4,9 @@
         <div class="col border d-flex flex-column justify-content-center p-2 align-items-start">
             <div class="d-flex justify-content-center align-items-center my-2">
                 <div>
-                    <h3 class="main-color section-color align-self-start p-3 border-bottom rounded border-rounded text-bold shadow">جدول موجودی</h3>
+                    <h3 class="main-color section-color align-self-start p-3 rounded border-rounded text-bold shadow">جدول موجودی</h3>
                 </div>
-                <div class="mx-4">
+                <div class="mx-4 shadow section-color rounded">
                     <a href="{{route('items.create')}}" class="btn btn-success">
                         کالای جدید
                     </a>

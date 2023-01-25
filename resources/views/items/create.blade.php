@@ -26,7 +26,8 @@
                 </div>
                 <div class="d-flex flex-column form-group w-50 my-1">
                     <label for="" class="form-label">دسته بندی</label>
-                    <select type="text" name="category_id" class="form-select w-100 text-center" />
+                    <select type="text" name="category_id" id="nameid" />
+                        <option></option>    
                         @foreach($categories as $category)
                             <option value="{{$category->id}}">{{$category->name}}</option>
                         @endforeach
@@ -48,5 +49,23 @@
                 </div>
             </form>
         </div>
+
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+
+        <script type="text/javascript">
+
+            $("#nameid").select2({
+                    placeholder: "دسته بندی",
+                    allowClear: true,
+                    
+                });
+                $select = $("#nameid").select2({});
+                $select.data('select2').$container.addClass('text-danger');
+                $select.data('select2').$container.addClass('form-select');
+                $select.data('select2').$container.addClass('text-center');
+                $select.data('select2').$dropdown.addClass('text-center');
+        </script>
+
     </div>
 </div>

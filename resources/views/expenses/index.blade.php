@@ -5,15 +5,15 @@
             
             <div class="d-flex justify-content-start align-items-center my-2">
                 <div>
-                    <h3 class="main-color section-color align-self-start p-3 border-bottom rounded border-rounded text-bold shadow">جدول هزینه ها</h3>
+                    <h3 class="main-color section-color align-self-start p-3 rounded border-rounded text-bold shadow">جدول هزینه ها</h3>
                 </div>
-                <div class="mx-4">
+                <div class="mx-4 shadow section-color rounded">
                     <a href="{{route('expenses.create')}}" class="btn btn-success">
                         هزینه جدید
                     </a>
                 </div>
             </div>
-            <table class="table table-bordered shadow">
+            <table class="table table-bordered shadow section-color rounded">
                 <thead>
                     <tr>
                         <td class="text-center p-2">عنوان</td>

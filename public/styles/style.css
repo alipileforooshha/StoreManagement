@@ -28,6 +28,10 @@ body{
     font-weight: bolder;
 }
 
+.form-css{
+    padding: 15px;
+}
+
 .bg-main-color{
     background-color: #FB5012;
 }
@@ -47,6 +51,7 @@ body{
 .dashboard-card{
     min-width: auto;
     border-radius: 10px;
+    max-width: 400px;
     background-color: #f9f9f9;
     box-shadow: 2px 2px 10px rgba(37, 37, 37, 0.432);
 }
