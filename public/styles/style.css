@@ -7,6 +7,9 @@ a{
 body{
     background-color: #eeeeee;
 }
+.background-color{
+    color: #eeeeee;
+}
 .section-color{
     background-color: #f7f7f7;
 }
@@ -33,9 +36,12 @@ body{
 }
 
 .bg-main-color{
-    background-color: #FB5012;
+    background-color: #FB5012 !important;
 }
 
+.text-white{
+    color: #f7f7f7;
+}
 .huge-text{
     font-size: 100px;
 }
