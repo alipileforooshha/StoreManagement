@@ -10,10 +10,10 @@
 </head>
 <body>
     <div class="vh-100 d-flex justify-content-center align-items-center">
-        <div class="d-flex flex-column justify-content-center align-items-start p-4 flex-grow-1 h-100">
-            <h1 class="main-color huge-text p-4">کسب و کارتو</h1>
+        <div class="d-flex flex-column bg-main-color justify-content-center align-items-start p-4 flex-grow-1 h-100">
+            <h1 class="background-color huge-text p-4">کسب و کارتو</h1>
             <br>
-            <h1 class="main-color huge-text p-4">مدیریت کن</h1>
+            <h1 class="background-color huge-text p-4">مدیریت کن</h1>
         </div>
 
         <div class="vh-100 d-flex justify-content-center align-items-center flex-column login-div">
@@ -21,14 +21,14 @@
                 @csrf
                 <label for="" class="main-color m-4 fs-2">وارد شوید</label>
                 <div class="m-4">
-                    <label for="" class="">شماره تلفن</label>
+                    <label for="" class="main-color">شماره تلفن</label>
                     <input type="text" name="mobile" id="" class="form-control mt-2">
                 </div>
                 <div class="m-4">
-                    <label for="" class="">رمز عبور</label>
+                    <label for="" class="main-color">رمز عبور</label>
                     <input type="password" name="password" id="" class="form-control mt-2">
                 </div>
-                <div class="m-4">
+                <div class="m-4 bg-main-color rounded">
                     <button type="submit" class="btn text-white main-color-bg text-center w-100">ورود</button>
                 </div>
             </form>
