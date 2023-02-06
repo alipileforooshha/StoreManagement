@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ExpensesController;
 use App\Http\Controllers\ItemsController;
@@ -11,6 +12,7 @@ use Illuminate\Support\Facades\Route;
 Route::view('/','landing')->name('landing');
 Route::view('/login','login')->name('login');
 Route::view('/register','register')->name('register');
+Route::view('/prices','prices')->name('prices');
 Route::post('/login',[AuthController::class, 'login'])->name('login.post');
 Route::post('/register',[AuthController::class, 'register'])->name('register.post');
 Route::get('/dashboard',[DashboardController::class, 'index'])->middleware('auth')->name('dashboard');
@@ -50,4 +52,13 @@ Route::group(['prefix'=>'categories', 'as'=>'categories'], function(){
     Route::delete('/{id}',[CategoryController::class, 'destroy'])->name('.delete');
     Route::get('/{id}',[CategoryController::class, 'item'])->name('.item');
     Route::put('/{id}',[CategoryController::class, 'update'])->name('.update');
+});
+
+Route::group(['prefix'=>'customers', 'as'=>'customers'], function(){
+    Route::get('/',[CustomerController::class, 'index'])->name('');
+    Route::get('/create',[CustomerController::class, 'create'])->name('.create');
+    Route::post('/create',[CustomerController::class, 'store'])->name('.store');
+    Route::delete('/{id}',[CustomerController::class, 'destroy'])->name('.delete');
+    Route::get('/{id}',[CustomerController::class, 'item'])->name('.item');
+    Route::put('/{id}',[CustomerController::class, 'update'])->name('.update');
 });

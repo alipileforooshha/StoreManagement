@@ -10,7 +10,7 @@
 
     <!-- Bootstrap CSS CDN -->
 <!-- CSS only -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">    <!-- Our Custom CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="{{asset('styles/sidebar.css')}}">
     <link rel="stylesheet" href="{{asset('styles/style.css')}}">
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
@@ -49,7 +49,7 @@
                             </a>
                         </li>
                         <li class="mt-2">
-                            <a href="#submenu3" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                            <a href="{{route('customers')}}" class="nav-link px-0 align-middle">
                                 <i class="fs-4 bi-grid"></i> <span class="ms-1 d-none d-sm-inline text-white fs-3">مشتریان</span>
                             </a>
                         </li>

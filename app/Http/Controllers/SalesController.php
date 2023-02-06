@@ -27,7 +27,7 @@ class SalesController extends Controller
     }
 
     public function create(){
-        $items = Item::all();
+        $items = Item::where('user_id',Auth::user()->id)->get();
         return view('sales.create',[
             'items' => $items
         ]);
@@ -45,14 +45,26 @@ class SalesController extends Controller
             'number.required' => 'فیلد تعداد باید پر شده باشد',
         ]);
 
+        $item = Item::find($request->item_id);
+
         if($validator->fails()){
             return Redirect::back()->withErrors($validator);
         }
+        if($request->number > $item->count){
+            // dd("wwww");
+            return back()->withErrors([
+                'msg' => 'تعداد فروخته شده از تعداد موجودی کمتر است'
+            ]);
+        }
 
+        $item->count -= $request->number;
+        $item->save();
         $request['user_id'] = Auth::user()->id;
-        $request['profit'] = $request->sale_price - Item::find($request->item_id)->buy_price;
+        $request['profit'] = $request->sale_price - $item->buy_price;
 
         Sale::create($request->all()); 
+
+        return redirect('/sales');
     }
 
     public function destroy($id){
