@@ -24,7 +24,7 @@
                     </div>
                     <div class="mt-2">
                         <h5>
-                            مجموع سود این ماه : {{number_format($all_sales_total_profit)}} تومن
+                            مجموع سود این ماه : {{number_format($all_sales_total_profit - $all_expenses_total_amount)}} تومن
                         </h5>
                     </div>
                 </div>
@@ -64,7 +64,7 @@
                             <h5 class="d-flex">
                                 <p class="m-0"> {{$expense->title}} &nbsp; </p>
                                 <p class="m-0"> : </p>
-                                <p class="m-0">&nbsp; {{$expense->amount}} عدد</p>
+                                <p class="m-0">&nbsp; {{number_format($expense->amount)}} تومان</p>
                             </h5>
                         </div>
                     @endforeach

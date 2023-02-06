@@ -83,3 +83,52 @@ tbody tr td{
     background-color: #FB5012;
     border-color: #b9b9b9;
 }
+
+.m-navbar{
+    border-radius: 0px 0px 16px 16px;
+}
+
+.landing-body{
+    background-color: #fff;
+}
+
+.first_section{
+    margin-top: 40px;
+}
+
+.header_text_one{
+    font-size: 86px;
+    font-weight: bolder;
+}
+
+.header_text_two{
+    font-size: 64px;
+    font-weight: bold;
+    color: #fa6129;
+}
+
+.services_section{
+    margin-top: 80px;
+}
+
+.services_section_two{
+    background-color: #768ad8;
+}
+
+.services_image{
+    width: 30%;
+}
+
+.services_text{
+    font-size: 24px;
+}
+
+.header_title_three{
+    color: #f8bc34;
+    font-size: 64px;
+    font-weight: bolder;
+}
+
+.plan-item{
+    border-radius: 15px;
+}

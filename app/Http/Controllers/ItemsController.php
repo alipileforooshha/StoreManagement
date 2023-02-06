@@ -46,7 +46,7 @@ class ItemsController extends Controller
     }
 
     public function create(){
-        $categories = Category::all();
+        $categories = Category::where('user_id',Auth::user()->id)->get();
         return view('items.create',[
             'categories' => $categories
         ]);
@@ -73,6 +73,8 @@ class ItemsController extends Controller
 
         $request['user_id'] = Auth::user()->id;
 
-        Item::create($request->all()); 
+        Item::create($request->all());
+
+        return redirect('/items');
     }
 }
